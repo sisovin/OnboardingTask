@@ -78,6 +78,9 @@
     <string name="btn_delete">លុប</string>
     <string name="status_pending">រង់ចាំ</string>
     <string name="status_completed">បានបញ្ចប់</string>
+    <string name="header_task_details">ព័ត៌មានលម្អិតការងារ</string>
+    <string name="status_in_progress">កំពុងដំណើរការ</string>
+    <string name="btn_mark_complete">បញ្ចប់ការងារ</string>
 
     <!-- Auth -->
     <string name="continue_with_google">បន្តជាមួយ Google</string>
@@ -117,6 +120,14 @@
     <!-- History Screen -->
     <string name="history_title">ប្រវត្តិការងារ</string>
     <string name="history_no_data">មិនមានប្រវត្តិការងារទេ</string>
+    <string name="filter_all">ទាំងអស់</string>
+    <string name="filter_completed">បានបញ្ចប់</string>
+    <string name="filter_missed">ខកខាន</string>
+    <string name="filter_deleted">បានលុប</string>
+    <string name="status_missed">ខកខាន</string>
+    <string name="status_deleted">បានលុប</string>
+    <string name="label_duration">រយៈពេល</string>
+    <string name="label_completion_date">កាលបរិច្ឆេទបញ្ចប់</string>
 
     <!-- Settings Screen -->
     <string name="settings_title">ការកំណត់</string>
@@ -136,4 +147,12 @@
     <string name="onboarding_button">ចាប់ផ្តើម</string>
     <string name="onboarding_have_account">មានគណនីហើយឬនៅ?</string>
     <string name="onboarding_login">ចូលប្រព័ន្ធ</string>
+
+    <!-- Recommended List Screen -->
+    <string name="filter_by_priority">តាមអាទិភាព</string>
+    <string name="filter_by_due_date">តាមកាលបរិច្ឆេទ</string>
+    <string name="filter_ai_picks">ជម្រើស AI</string>
+    <string name="dismiss_not_interested">មិនចាប់អារម្មណ៍</string>
+    <string name="reason_due_soon">ជិតដល់ពេលកំណត់</string>
+    <string name="reason_high_priority">អាទិភាពខ្ពស់</string>
 </resources>

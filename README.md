@@ -147,7 +147,7 @@ app/
 
 ## 📝 Screen 3: Task Details
 
-**Objective:** View and manage specific task attributes. Focus on readability and editing capability.
+**Objective:** View and manage specific task attributes. Focus on readability and editing capability. The TaskDetailsScreen should use off-black background (`Color(0x000000)` / use Text Color OffWhite (#F5F7FA)
 
 **Top Bar Area:**
 * **Left:** ⬅️ Back Arrow Icon (Navigates back to Home).
@@ -168,7 +168,8 @@ app/
 
 ## ✨ Screen 4: Recommended List
 
-**Objective:** A dedicated view for curated suggestions (likely navigated to from the "See All" button on the Home Screen's Recommendation section).
+**Objective:** A dedicated view for curated suggestions (likely navigated to from the "See All" button on the Home Screen's Recommendation section). The RecommendedListScreen should use off-black background (`Color(0x000000)` / use Text Color OffWhite (#F5F7FA)
+
 
 **Top Bar Area:**
 * **Left:** ⬅️ Back Arrow Icon.
@@ -224,11 +225,11 @@ It is designed with **Jetpack Compose Material 3**, features **Khmer language su
 5.  **Modern Aesthetics**: Uses rounded corners (`RoundedCornerShape(12.dp)` for cards) and a soft, off-black background (`Color(0x000000)` / use Text Color OffWhite (#F5F7FA) for a clean, modern look.
 
 ---
-*   **History**: View completed tasks and past activities. The `HistoryScreen.kt` implementation below provides a comprehensive and modern view of completed tasks and past activities. It uses **Jetpack Compose Material 3** and features **filtering**, **sorting**, and clear display of historical records, including Khmer labels.
+*   **History**: View completed tasks and past activities. The `HistoryScreen.kt` implementation below provides a comprehensive and modern view of completed tasks and past activities. It uses **Jetpack Compose Material 3** and features **filtering**, **sorting**, and clear display of historical records, including Khmer labels, and a soft, off-black background (`Color(0x000000)` / use Text Color OffWhite (#F5F7FA) for a clean, modern look.
 
 ### Key UI/UX Features:
 
-1.  **Filtering (`HistoryFilterButton`)**: Includes a **Dropdown Menu** in the Top Bar that allows users to filter the list instantly by status (Completed, Missed, Deleted). The filter icon changes color when a filter is active.
+1.  **Filtering (`HistoryFilterButton`)**: Includes a **Dropdown Menu** in the Top Bar that allows users to filter the list instantly by status (Completed, Missed, Deleted). The filter icon changes color when a filter is active. 
 2.  **Modern List Card (`HistoryCard`)**: Each history item is presented in a clean `Card` with:
       * **Color-Coded Status Icon**: Helps users quickly identify the outcome (Green for Completed, Red for Missed/Failed).
       * **Detailed Information**: Shows Title, Category, Duration, and Completion Date.

@@ -23,6 +23,21 @@ android {
         }
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = file("../../release.keystore")
+            storePassword = "password"
+            keyAlias = "release"
+            keyPassword = "password"
+        }
+        create("upload") {
+            storeFile = file("../../upload.keystore")
+            storePassword = "password"
+            keyAlias = "upload"
+            keyPassword = "password"
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -30,6 +45,15 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+             // Use release signing for release builds during development
+            signingConfig = signingConfigs.getByName("release")
+        }
+        create("upload") {
+            isMinifyEnabled = true
+            proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-project.txt")
+            matchingFallbacks += "release"
+            isDebuggable = project.properties["enableLogsInRelease"]?.toString()?.toBoolean() ?: false
+            signingConfig = signingConfigs.getByName("upload")
         }
     }
     compileOptions {

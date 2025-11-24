@@ -85,14 +85,14 @@ fun ProfileScreen(
             Spacer(modifier = Modifier.height(16.dp))
 
             Text(
-                text = "Sok Dara", // Dummy data
+                text = "Chieng Sisovin", // Dummy data
                 style = MaterialTheme.typography.headlineMedium,
                 fontWeight = FontWeight.Bold,
                 color = OffWhite
             )
 
             Text(
-                text = "sok.dara@example.com", // Dummy data
+                text = "sisovin@example.com", // Dummy data
                 style = MaterialTheme.typography.bodyLarge,
                 color = Color.Gray
             )

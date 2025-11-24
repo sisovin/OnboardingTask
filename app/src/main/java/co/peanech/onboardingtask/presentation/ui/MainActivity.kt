@@ -141,7 +141,8 @@ class MainActivity : ComponentActivity() {
                         composable("home") {
                             HomeScreen(
                                 onNavigateToTaskDetails = { taskId -> navController.navigate("task_details/$taskId") },
-                                onNavigateToNotifications = { navController.navigate("notifications") }
+                                onNavigateToNotifications = { navController.navigate("notifications") },
+                                onNavigateToRecommended = { navController.navigate("recommended") }
                             )
                         }
                         composable("notifications") {
@@ -178,7 +179,12 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         composable("recommended") {
-                            RecommendedListScreen()
+                            RecommendedListScreen(
+                                onNavigateBack = { navController.popBackStack() },
+                                onTaskClick = { taskId ->
+                                    navController.navigate("task_details/$taskId")
+                                }
+                            )
                         }
                     }
                 }

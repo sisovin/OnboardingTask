@@ -58,7 +58,8 @@ data class TaskUiModel(
 @Composable
 fun HomeScreen(
     onNavigateToTaskDetails: (String) -> Unit,
-    onNavigateToNotifications: () -> Unit
+    onNavigateToNotifications: () -> Unit,
+    onNavigateToRecommended: () -> Unit
 ) {
     var searchQuery by remember { mutableStateOf("") }
     val categories = listOf(
@@ -184,11 +185,23 @@ fun HomeScreen(
         // Rec. Tasks
         item {
             Column {
-                Text(
-                    text = stringResource(R.string.section_recommendation),
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold
-                )
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = stringResource(R.string.section_recommendation),
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold
+                    )
+                    Text(
+                        text = "See All",
+                        style = MaterialTheme.typography.labelLarge,
+                        color = Color(0xFF007AFF),
+                        modifier = Modifier.clickable { onNavigateToRecommended() }
+                    )
+                }
                 Spacer(modifier = Modifier.height(12.dp))
                 LazyRow(
                     horizontalArrangement = Arrangement.spacedBy(16.dp)
