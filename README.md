@@ -94,7 +94,7 @@ app/
 ## 🎨 Global Design System
 
 * **Primary Color:** Ocean Blue (`#007AFF` or similar) - Used for primary buttons and active states.
-* **Background:** Off-White / Light Gray (`#F5F7FA`) to maintain a clean, modern look.
+* **Background:** Off-Black / Light Gray (`#F5F7FA`) to maintain a clean, modern look.
 * **Typography:**
     * *English:* Inter or SF Pro Display.
     * *Khmer:* **Kantumruy Pro** or **Battambang** (Google Fonts) for readability and modern aesthetics.
@@ -193,7 +193,7 @@ It is designed with **Jetpack Compose Material 3**, features **Khmer language su
 
 ### Key UI Features
 
-1.  **Form Structure**: Divided into clear `InputSection` blocks (Title, Category, Due Date, Priority, Description) for high readability.
+1.  **Form Structure**: Use off-black background (`Color(0x000000)`, Divided into clear `InputSection` blocks (Title, Category, Due Date, Priority, Description) for high readability.
 2.  **Date & Time**: Uses a split-row layout (`DateTimePickerBox`). In a real app, clicking these would trigger `DatePickerDialog`. Here, they update state to show interaction feedback.
 3.  **Visual Priority**:
       * **Priority Selector**: Instead of a generic dropdown, I created a `PrioritySelectionRow`. This creates a large touch target and visually highlights the selection with a colored border and background tint (Red for High, Green for Low).
@@ -202,10 +202,39 @@ It is designed with **Jetpack Compose Material 3**, features **Khmer language su
 
 ---
 
-*   **Profile Screen**: User information and stats.
+*   **Profile Screen**: User information and stats. This implementation uses Jetpack Compose and Material 3 design principles to create a clean, modern, and information-rich profile screen, complete with placeholder user data and Khmer labels. The ProfileScreen should implement with Use off-black background (`Color(0x000000)` / use Text Color OffWhite (#F5F7FA)
 
-*   **Settings Screen**: App configuration.
-*   **History**: View completed tasks and past activities.
+### Key UI/UX Features:
+
+1.  **Clear Segmentation:** The screen is clearly divided into three sections: **Header** (Identity), **StatsCard** (Metrics), and **ActionList** (Navigation/Actions), improving scannability.
+2.  **Modern Stats Card:** Uses a clean `Card` component with vertical dividers to present three key metrics side-by-side, which is highly common in modern dashboards. Each metric is color-coded for quick visual differentiation.
+3.  **Action List:** The action items (Settings, Logout) use `ListItem`s for standardized touch targets, ensuring easy navigation. The "Logout" button is intentionally colored **Red** to signal a critical, final action.
+4.  **Khmer Typography:** All important labels include the Khmer translation, adhering to the design specification.
+
+---
+
+*   **Settings Screen**: App configuration. This implementation provides a clean and structured `SettingsScreen.kt` using Jetpack Compose, organized into logical sections for easy app configuration management, all while maintaining support for the Khmer language.
+
+### Key UI/UX Features
+
+1.  **Section Organization**: The settings are grouped into logical `SettingsSection` blocks ("General," "Notifications," "Privacy & Security") using bold titles and elevated `Card` containers. This is a best practice for complex configuration screens.
+2.  **Toggle Components**: The `SettingsItemToggle` is used for binary options (like Dark Mode and Notifications) and features a modern Material 3 `Switch`.
+3.  **Clickable Items**: The `SettingsItemClickable` is used for navigation (like Language and Change Password) and includes a `ChevronRight` icon to clearly indicate that clicking will lead to a new screen.
+4.  **Language Support**: Titles and subtitles include Khmer translations, making the interface accessible as requested.
+5.  **Modern Aesthetics**: Uses rounded corners (`RoundedCornerShape(12.dp)` for cards) and a soft, off-black background (`Color(0x000000)`) for a clean, modern look.
+
+---
+*   **History**: View completed tasks and past activities. The `HistoryScreen.kt` implementation below provides a comprehensive and modern view of completed tasks and past activities. It uses **Jetpack Compose Material 3** and features **filtering**, **sorting**, and clear display of historical records, including Khmer labels.
+
+### Key UI/UX Features:
+
+1.  **Filtering (`HistoryFilterButton`)**: Includes a **Dropdown Menu** in the Top Bar that allows users to filter the list instantly by status (Completed, Missed, Deleted). The filter icon changes color when a filter is active.
+2.  **Modern List Card (`HistoryCard`)**: Each history item is presented in a clean `Card` with:
+      * **Color-Coded Status Icon**: Helps users quickly identify the outcome (Green for Completed, Red for Missed/Failed).
+      * **Detailed Information**: Shows Title, Category, Duration, and Completion Date.
+      * **Khmer Labels**: All status and filter options are labeled in Khmer.
+3.  **Empty State Handling**: The `EmptyHistoryState` component dynamically updates its message based on whether the user has applied a filter or if the list is just naturally empty.
+4.  **Data Models**: Uses Kotlin `enum`s (`HistoryStatus`) for clear, reusable state management, making the UI robust and easy to scale.
 
 ---
 

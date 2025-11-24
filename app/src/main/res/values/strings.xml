@@ -11,6 +11,9 @@
     <string name="label_email">អ៊ីមែល</string>
     <string name="label_password">ពាក្យសម្ងាត់</string>
     <string name="label_name">ឈ្មោះ</string>
+    <string name="label_task_date">កាលបរិច្ឆេទ</string>
+    <string name="label_task_time">ម៉ោង</string>
+    <string name="label_task_priority">អាទិភាព</string>
 
     <!-- login -->
     <string name="login_subtitle">សូមស្វាគមន៍ការត្រឡប់មកវិញ</string>
@@ -99,6 +102,9 @@
     <string name="hint_task_description">បញ្ចូលការពិពណ៌នា</string>
     <string name="label_task_category">ប្រភេទ</string>
     <string name="btn_add_task">បន្ថែមការងារ</string>
+    <string name="priority_high">ខ្ពស់</string>
+    <string name="priority_medium">មធ្យម</string>
+    <string name="priority_low">ទាប</string>
 
     <!-- Profile Screen -->
     <string name="profile_title">ប្រវត្តិរូប</string>
