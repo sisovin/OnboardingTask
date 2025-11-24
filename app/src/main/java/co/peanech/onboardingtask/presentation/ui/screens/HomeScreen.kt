@@ -14,11 +14,13 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -35,7 +37,8 @@ import co.peanech.onboardingtask.R
 
 @Composable
 fun HomeScreen(
-    onNavigateToTaskDetails: (String) -> Unit
+    onNavigateToTaskDetails: (String) -> Unit,
+    onNavigateToNotifications: () -> Unit
 ) {
     var searchQuery by remember { mutableStateOf("") }
     val categories = listOf(
@@ -54,11 +57,24 @@ fun HomeScreen(
             .fillMaxSize()
             .padding(16.dp)
     ) {
-        Text(
-            text = stringResource(R.string.home_title),
-            style = MaterialTheme.typography.headlineMedium,
-            modifier = Modifier.padding(bottom = 16.dp)
-        )
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 16.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                text = stringResource(R.string.home_greeting, "Dara"),
+                style = MaterialTheme.typography.headlineSmall
+            )
+            IconButton(onClick = onNavigateToNotifications) {
+                Icon(
+                    imageVector = Icons.Default.Notifications,
+                    contentDescription = stringResource(R.string.content_description_notifications)
+                )
+            }
+        }
 
         // Search Bar
         OutlinedTextField(

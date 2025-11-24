@@ -91,34 +91,149 @@ app/
 *   **Localization**: Full UI/UX support for **Khmer (Cambodia)** language.
 
 ## 📱 UI/UX Specifications (Per Screen)
+## 🎨 Global Design System
 
-### 1. Screen 1: Onboarding (Welcome)
-*   **Overview**: The entry point for new users.
-*   **Key Features**: Welcome message, app introduction, and navigation to authentication (Login/Signup).
-*   **Language**: Khmer (e.g., "សូមស្វាគមន៍មកកាន់ Onboarding Task").
+* **Primary Color:** Ocean Blue (`#007AFF` or similar) - Used for primary buttons and active states.
+* **Background:** Off-White / Light Gray (`#F5F7FA`) to maintain a clean, modern look.
+* **Typography:**
+    * *English:* Inter or SF Pro Display.
+    * *Khmer:* **Kantumruy Pro** or **Battambang** (Google Fonts) for readability and modern aesthetics.
+* **Iconography:** Rounded, outline style (24px stroke).
 
-### 2. Screen 2: Home Screen
-*   **Overview**: The central hub of the application.
-*   **Key Features**:
-    *   **Search Bar**: Allows users to quickly find tasks or items.
-    *   **Category Rows**: Horizontal scrollable list to filter content by category.
-    *   **Task List**: Display of active tasks.
-*   **Language**: Khmer (e.g., "ទំព័រដើម").
+---
 
-### 3. Screen 3: Task Details
-*   **Overview**: Detailed view of a specific task.
-*   **Key Features**: Full task description, due dates, status management, and edit/delete options.
-*   **Language**: Khmer (e.g., "ព័ត៌មានលម្អិតការងារ").
+## 📱 Screen 1: Onboarding (Welcome)
 
-### 4. Screen 4: Recommended List
-*   **Overview**: A curated list of suggested items or tasks.
-*   **Key Features**: Personalized recommendations based on user activity or predefined criteria.
-*   **Language**: Khmer (e.g., "បញ្ជីដែលបានណែនាំ").
+**Objective:** Create a warm, inviting first impression and guide the user to authentication.
+
+| Component | UI Description | Khmer Text (Label) | Interaction/Behavior |
+| :--- | :--- | :--- | :--- |
+| **Hero Image** | Center-aligned vector illustration (productivity theme). | N/A | Static. |
+| **Title** | Large, bold typography (H1). | **សូមស្វាគមន៍មកកាន់ Onboarding Task** | Static. |
+| **Subtitle** | Medium grey, smaller text explaining value prop. | គ្រប់គ្រងការងាររបស់អ្នកដោយងាយស្រួល (Manage your tasks easily) | Static. |
+| **Primary Button** | Full width, rounded corners, Blue background. | **ចាប់ផ្តើម (Get Started)** | Navigates to *Login/Signup*. |
+| **Secondary Link** | Small text button at the bottom. | មានគណនីរួចហើយ? ចូល (Have account? Login) | Navigates to *Login Screen*. |
+
+---
+
+## 🏠 Screen 2: Home Screen
+
+**Objective:** The central dashboard. Needs to handle high information density without looking cluttered.
+
+**Top Bar Area:**
+* **Left:** Greeting Text ("Soursdey, [Name]").
+* **Right:** 🔔 Notification Icon (Navigates to *NotificationsScreen*).
+
+**Main Content Area:**
+
+| Component | UI Description | Khmer Text (Label) | Interaction/Behavior |
+| :--- | :--- | :--- | :--- |
+| **Search Bar** | Rounded input field with magnifying glass icon. Grey background. | **ស្វែងរក... (Search...)** | Tapping opens keyboard/search view. |
+| **Category Rows** | Horizontal scroll (Pills/Chips). Active state = Blue; Inactive = Grey. | **ការងារ, ផ្ទាល់ខ្លួន, បន្ទាន់ (Work, Personal, Urgent)** | Filters the content below. |
+| **Rec. Tasks** | Horizontal Carousel. Cards with "Priority" badge. | **ការងារដែលបានណែនាំ (Recommended)** | Swiping horizontally shows top picks. |
+| **Next Tasks** | Section with "Gemini Sparkle" icon. Displays AI suggestions. | **ការងារបន្ទាប់ (Next Tasks)** | Shows predictive tasks from Gemini. |
+| **Task List** | Vertical list. Simple row items with Checkbox + Title + Due Time. | **បញ្ជីការងារ (Task List)** | Tap to view details; Tap checkbox to complete. |
+
+**Bottom Navigation Bar:**
+* **Background:** Black with top shadow.
+* **Layout:** 5 Items.
+    1.  🏠 **Home** (Active)
+    2.  🕒 **History**
+    3.  ➕ **Add Button:** (Center) Large, Floating style, **Blue Circle Background**, White Icon. Sits slightly higher than the bar.
+    4.  👤 **Profile**
+    5.  ⚙️ **Settings**
+
+---
+
+## 📝 Screen 3: Task Details
+
+**Objective:** View and manage specific task attributes. Focus on readability and editing capability.
+
+**Top Bar Area:**
+* **Left:** ⬅️ Back Arrow Icon (Navigates back to Home).
+* **Center:** Title text ("Task Details").
+* **Right:** ✏️ Edit Icon or 🗑️ Delete Icon.
+
+**Content Area:**
+
+| Component | UI Description | Khmer Text (Label) | Interaction/Behavior |
+| :--- | :--- | :--- | :--- |
+| **Header** | Large, bold task title. | **ព័ត៌មានលម្អិតការងារ (Task Details)** | Static (or tap to edit). |
+| **Status Chip** | Small rounded badge (e.g., "In Progress" - Yellow). | **កំពុងដំណើរការ (In Progress)** | Tap to change status. |
+| **Description** | Multi-line text block. | *[User generated description]* | Scrollable if long. |
+| **Date/Time** | Icon + Date text. | **កាលបរិច្ឆេទ (Date)** | Opens Date Picker. |
+| **Action Button** | Large button at the bottom fixed to screen. | **បញ្ចប់ការងារ (Mark Complete)** | Marks task done and returns to Home. |
+
+---
+
+## ✨ Screen 4: Recommended List
+
+**Objective:** A dedicated view for curated suggestions (likely navigated to from the "See All" button on the Home Screen's Recommendation section).
+
+**Top Bar Area:**
+* **Left:** ⬅️ Back Arrow Icon.
+* **Center:** Title text.
+
+**Content Area:**
+
+| Component | UI Description | Khmer Text (Label) | Interaction/Behavior |
+| :--- | :--- | :--- | :--- |
+| **Page Title** | H2 Header at the top. | **បញ្ជីដែលបានណែនាំ (Recommended List)** | Static. |
+| **Filter Tabs** | Tabs for "By Priority", "By Due Date", "AI Picks". | **តាមអាទិភាព (By Priority)** | Sorts the list below. |
+| **Task Cards** | Rich cards displaying: Title, Reason for recommendation (e.g., "Due soon"), and urgency color coding. | N/A | Tap to open *Task Details* (Screen 3). |
+| **Dismiss Action** | Small "X" or "Not interested" on cards. | **មិនចាប់អារម្មណ៍ (Not interested)** | Removes item from recommendation algorithm. |
+
+---
 
 ## 🔜 Next Steps (Future Screens)
+
+*   **AddNewTask Screen** User can add new task that design as a comprehensive, modern implementation of the `AddNewTaskScreen.kt`.
+
+It is designed with **Jetpack Compose Material 3**, features **Khmer language support**, uses **Input Chips** for quick selection, and includes a polished layout for data entry.
+
+### Key UI Features
+
+1.  **Form Structure**: Divided into clear `InputSection` blocks (Title, Category, Due Date, Priority, Description) for high readability.
+2.  **Date & Time**: Uses a split-row layout (`DateTimePickerBox`). In a real app, clicking these would trigger `DatePickerDialog`. Here, they update state to show interaction feedback.
+3.  **Visual Priority**:
+      * **Priority Selector**: Instead of a generic dropdown, I created a `PrioritySelectionRow`. This creates a large touch target and visually highlights the selection with a colored border and background tint (Red for High, Green for Low).
+4.  **Material 3 Chips**: Uses `FilterChip` for categories, which is standard for modern Android apps.
+5.  **Fixed Bottom Button**: The "Create Task" button is placed in the `bottomBar` slot of the Scaffold. This ensures it is always accessible, even if the keyboard is open or the user has scrolled down.
+
+---
+
 *   **Profile Screen**: User information and stats.
+
 *   **Settings Screen**: App configuration.
 *   **History**: View completed tasks and past activities.
+
+---
+
+*   **NotificationsScreen** Display the complete, modern Jetpack Compose implementation for `NotificationsScreen.kt`.
+This code includes:
+
+1.  **Khmer Language Support**: Using the translations defined in your specs.
+2.  **Material 3 Design**: Using `CenterAlignedTopAppBar`, `LazyColumn`, and modern styling.
+3.  **Empty State Handling**: A dedicated view when the list is empty.
+4.  **Dummy Data**: A list of sample notifications to visualize the layout.
+
+### Key Features in the Code:
+
+1.  **`NotificationItem` Data Class**: Defines the structure so you can easily swap the dummy data for real API data later.
+2.  **Color Coded Icons**:
+      * **Green**: Success (Task Completed).
+      * **Blue**: Info (System messages).
+      * **Orange**: Reminders.
+3.  **Khmer Typography**: I added `lineHeight = 20.sp` to the body text. Khmer characters often have tall "legs" (descenders/ascenders), so extra line height prevents the text from overlapping or looking cramped.
+4.  **Empty State Logic**: The `if (isEmptyState)` block cleanly swaps between the List view and the Empty view.
+
+---
+
+### 💡 Design Notes for Developer
+* **Khmer Font Handling:** Ensure `line-height` is set to at least `1.5` or `1.6` because Khmer script has tall ascenders and descenders (legs above and below the line).
+* **Bottom Nav:** The center "Add" button should use absolute positioning to float halfway out of the navigation bar for that modern "pop-out" look.
+
+---
 
 ## 🤝 Contribution
 

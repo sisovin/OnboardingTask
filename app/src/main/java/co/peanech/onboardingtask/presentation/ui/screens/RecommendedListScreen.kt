@@ -15,9 +15,21 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import co.peanech.onboardingtask.R
 
+data class Task(
+    val id: String,
+    val name: String,
+    val category: Int,
+    val isRecommended: Boolean
+)
+
 @Composable
 fun RecommendedListScreen() {
-    val recommendedItems = listOf("Item A", "Item B", "Item C", "Item D")
+    val recommendedItems = listOf(
+        Task("1", "Item A", R.string.category_work, isRecommended = true),
+        Task("2", "Item B", R.string.category_personal, isRecommended = true),
+        Task("3", "Item C", R.string.category_work, isRecommended = true),
+        Task("4", "Item D", R.string.category_urgent, isRecommended = true)
+    )
 
     Column(
         modifier = Modifier
@@ -25,7 +37,7 @@ fun RecommendedListScreen() {
             .padding(16.dp)
     ) {
         Text(
-            text = stringResource(R.string.recommended_title),
+            text = stringResource(R.string.section_recommendation), // Updated string resource
             style = MaterialTheme.typography.headlineMedium,
             modifier = Modifier.padding(bottom = 16.dp)
         )
@@ -35,7 +47,7 @@ fun RecommendedListScreen() {
             contentPadding = PaddingValues(bottom = 16.dp)
         ) {
             items(recommendedItems) { item ->
-                TaskItem(taskName = item, onClick = { /* Handle Click */ })
+                TaskItem(taskName = item.name, onClick = { /* Handle Click */ })
             }
         }
     }
