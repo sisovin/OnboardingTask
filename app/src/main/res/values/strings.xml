@@ -1,47 +1,71 @@
 <resources>
-    <string name="app_name">Onboarding Task Android</string>
+    <string name="app_name">Onboarding Task</string>
 
     <!-- label -->
-    <string name="label_login">로그인</string>
-    <string name="label_auto_login">자동 로그인</string>
-    <string name="label_keep_login">로그인 상태 유지</string>
-    <string name="label_logout">로그아웃</string>
-    <string name="label_signup">회원가입</string>
-    <string name="label_withdraw">회원탈퇴</string>
-    <string name="label_email">이메일</string>
-    <string name="label_password">비밀번호</string>
-    <string name="label_name">이름</string>
+    <string name="label_login">ចូលគណនី</string>
+    <string name="label_auto_login">ចូលដោយស្វ័យប្រវត្តិ</string>
+    <string name="label_keep_login">រក្សាការចូល</string>
+    <string name="label_logout">ចាកចេញ</string>
+    <string name="label_signup">ចុះឈ្មោះ</string>
+    <string name="label_withdraw">លុបគណនី</string>
+    <string name="label_email">អ៊ីមែល</string>
+    <string name="label_password">ពាក្យសម្ងាត់</string>
+    <string name="label_name">ឈ្មោះ</string>
 
     <!-- login -->
-    <string name="login_subtitle">돌아오신 걸 환영합니다.</string>
+    <string name="login_subtitle">សូមស្វាគមន៍ការត្រឡប់មកវិញ</string>
 
     <!-- signup -->
-    <string name="signup_check_email_duplicated">중복 확인</string>
-    <string name="signup_email_not_exist">사용 가능한 이메일입니다.</string>
-    <string name="signup_subtitle">정보를 입력해주세요.</string>
+    <string name="signup_check_email_duplicated">ពិនិត្យការជាន់គ្នា</string>
+    <string name="signup_email_not_exist">អ៊ីមែលនេះអាចប្រើបាន</string>
+    <string name="signup_subtitle">សូមបំពេញព័ត៌មាន</string>
 
     <!-- user -->
     <string name="user_emoji_handshake">👋</string>
-    <string name="user_greetings">안녕하세요, %s 님</string>
-    <string name="user_email">이메일: %s</string>
+    <string name="user_greetings">សួស្តី, %s</string>
+    <string name="user_email">អ៊ីមែល: %s</string>
 
     <!-- hint -->
-    <string name="hint_email">이메일 입력</string>
-    <string name="hint_password">비밀번호 입력</string>
-    <string name="hint_password_check">비밀번호 확인</string>
-    <string name="hint_username">이름 입력</string>
+    <string name="hint_email">បញ្ចូលអ៊ីមែល</string>
+    <string name="hint_password">បញ្ចូលពាក្យសម្ងាត់</string>
+    <string name="hint_password_check">បញ្ជាក់ពាក្យសម្ងាត់</string>
+    <string name="hint_username">បញ្ចូលឈ្មោះ</string>
+    <string name="search_hint">ស្វែងរក...</string>
 
     <!-- error -->
-    <string name="error_empty_all">모든 항목을 입력해주세요.</string>
-    <string name="error_email_empty">이메일을 입력해주세요.</string>
-    <string name="error_email_not_checked">이메일 중복 확인을 해주세요.</string>
-    <string name="error_email_duplicated">중복된 이메일입니다.</string>
-    <string name="error_email_regex">이메일 형식을 확인해주세요.</string>
-    <string name="error_password_empty">비밀번호를 입력해주세요.</string>
-    <string name="error_password_check">비밀번호가 일치하지 않습니다.</string>
-    <string name="error_password_regex">비밀번호는 영문 소문자, 대문자, 숫자를 포함해 8자 이상이어야 합니다.</string>
-    <string name="error_access">잘못된 접근입니다.</string>
+    <string name="error_empty_all">សូមបំពេញគ្រប់ចំណុច</string>
+    <string name="error_email_empty">សូមបញ្ចូលអ៊ីមែល</string>
+    <string name="error_email_not_checked">សូមពិនិត្យមើលអ៊ីមែលជាន់គ្នា</string>
+    <string name="error_email_duplicated">អ៊ីមែលនេះត្រូវបានប្រើរួចហើយ</string>
+    <string name="error_email_regex">សូមពិនិត្យទម្រង់អ៊ីមែល</string>
+    <string name="error_password_empty">សូមបញ្ចូលពាក្យសម្ងាត់</string>
+    <string name="error_password_check">ពាក្យសម្ងាត់មិនត្រូវគ្នាទេ</string>
+    <string name="error_password_regex">ពាក្យសម្ងាត់ត្រូវមានអក្សរតូច ធំ និងលេខ យ៉ាងតិច ៨ តួ</string>
+    <string name="error_access">ការចូលមិនត្រឹមត្រូវ</string>
 
     <!-- content description -->
-    <string name="description_back">이전으로</string>
+    <string name="description_back">ត្រឡប់ក្រោយ</string>
+
+    <!-- Compose Screens -->
+    <string name="onboarding_welcome">សូមស្វាគមន៍មកកាន់ Onboarding Task</string>
+    <string name="onboarding_get_started">ចាប់ផ្តើម</string>
+    <string name="home_title">ទំព័រដើម</string>
+    <string name="task_details_title">ព័ត៌មានលម្អិតការងារ: %s</string>
+    <string name="recommended_title">បញ្ជីដែលបានណែនាំ</string>
+
+    <!-- Home Screen -->
+    <string name="category_all">ទាំងអស់</string>
+    <string name="category_work">ការងារ</string>
+    <string name="category_personal">ផ្ទាល់ខ្លួន</string>
+    <string name="category_shopping">ទិញទំនិញ</string>
+    <string name="task_list_title">បញ្ជីការងារ</string>
+
+    <!-- Task Details -->
+    <string name="task_description">ការពិពណ៌នា</string>
+    <string name="task_date">កាលបរិច្ឆេទ</string>
+    <string name="task_status">ស្ថានភាព</string>
+    <string name="btn_edit">កែប្រែ</string>
+    <string name="btn_delete">លុប</string>
+    <string name="status_pending">រង់ចាំ</string>
+    <string name="status_completed">បានបញ្ចប់</string>
 </resources>
