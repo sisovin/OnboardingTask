@@ -120,7 +120,7 @@ fun HomeScreen(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = stringResource(R.string.home_greeting, "Dara"),
+                    text = stringResource(R.string.home_greeting, "ស៊ីសូវិន"),
                     style = MaterialTheme.typography.headlineSmall
                 )
                 IconButton(onClick = onNavigateToNotifications) {

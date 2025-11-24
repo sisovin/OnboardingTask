@@ -57,7 +57,7 @@
     <string name="recommended_title">បញ្ជីដែលបានណែនាំ</string>
 
     <!-- Home Screen -->
-    <string name="home_greeting">Soursdey, %s</string>
+    <string name="home_greeting">សួស្ដី, %s</string>
     <string name="search_hint">ស្វែងរក...</string>
     <string name="category_all">ទាំងអស់</string>
     <string name="category_work">ការងារ</string>
@@ -131,7 +131,7 @@
     <string name="notifications_empty">មិនមានការជូនដំណឹងទេ</string>
 
     <!-- Onboarding Screen -->
-    <string name="onboarding_title">Manage your Task with\nDayzer</string>
+    <string name="onboarding_title">គ្រប់គ្រងភារកិច្ចរបស់អ្នកជាមួយ\nកម្មវិធីទិវា</string>
     <string name="onboarding_subtitle">Organize your daily life and work with Dayzer. Simple, easy, and effective.</string>
     <string name="onboarding_button">Get Started</string>
     <string name="onboarding_have_account">Have an account?</string>
