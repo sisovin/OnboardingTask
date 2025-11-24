@@ -47,7 +47,16 @@ fun RecommendedListScreen() {
             contentPadding = PaddingValues(bottom = 16.dp)
         ) {
             items(recommendedItems) { item ->
-                TaskItem(taskName = item.name, onClick = { /* Handle Click */ })
+                TaskItem(
+                    task = TaskUiModel(
+                        id = item.id,
+                        title = item.name,
+                        dueDate = "Today", // Dummy date
+                        priority = "Medium", // Dummy priority
+                        category = item.category
+                    ),
+                    onClick = { /* Handle Click */ }
+                )
             }
         }
     }
