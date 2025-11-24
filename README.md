@@ -213,7 +213,7 @@ It is designed with **Jetpack Compose Material 3**, features **Khmer language su
 
 ---
 
-*   **Settings Screen**: App configuration. This implementation provides a clean and structured `SettingsScreen.kt` using Jetpack Compose, organized into logical sections for easy app configuration management, all while maintaining support for the Khmer language.
+*   **Settings Screen**: App configuration. This implementation provides a clean and structured `SettingsScreen.kt` using Jetpack Compose, organized into logical sections for easy app configuration management, all while maintaining support for the Khmer language. The SettingsScreen should use off-black background (`Color(0x000000)` / use Text Color OffWhite (#F5F7FA)
 
 ### Key UI/UX Features
 
@@ -221,7 +221,7 @@ It is designed with **Jetpack Compose Material 3**, features **Khmer language su
 2.  **Toggle Components**: The `SettingsItemToggle` is used for binary options (like Dark Mode and Notifications) and features a modern Material 3 `Switch`.
 3.  **Clickable Items**: The `SettingsItemClickable` is used for navigation (like Language and Change Password) and includes a `ChevronRight` icon to clearly indicate that clicking will lead to a new screen.
 4.  **Language Support**: Titles and subtitles include Khmer translations, making the interface accessible as requested.
-5.  **Modern Aesthetics**: Uses rounded corners (`RoundedCornerShape(12.dp)` for cards) and a soft, off-black background (`Color(0x000000)`) for a clean, modern look.
+5.  **Modern Aesthetics**: Uses rounded corners (`RoundedCornerShape(12.dp)` for cards) and a soft, off-black background (`Color(0x000000)` / use Text Color OffWhite (#F5F7FA) for a clean, modern look.
 
 ---
 *   **History**: View completed tasks and past activities. The `HistoryScreen.kt` implementation below provides a comprehensive and modern view of completed tasks and past activities. It uses **Jetpack Compose Material 3** and features **filtering**, **sorting**, and clear display of historical records, including Khmer labels.
@@ -238,7 +238,7 @@ It is designed with **Jetpack Compose Material 3**, features **Khmer language su
 
 ---
 
-*   **NotificationsScreen** Display the complete, modern Jetpack Compose implementation for `NotificationsScreen.kt`.
+*   **NotificationsScreen** Display the complete, modern Jetpack Compose implementation for `NotificationsScreen.kt`. The NotificationsScreen should use off-black background (`Color(0x000000)` / use Text Color OffWhite (#F5F7FA)
 This code includes:
 
 1.  **Khmer Language Support**: Using the translations defined in your specs.

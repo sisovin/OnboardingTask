@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Onboarding Task</string>
+    <string name="app_name">ភារកិច្ចណែនាំ</string>
 
     <!-- label -->
     <string name="label_login">ចូលគណនី</string>
@@ -49,7 +49,7 @@
     <string name="description_back">ត្រឡប់ក្រោយ</string>
 
     <!-- Compose Screens -->
-    <string name="onboarding_welcome">សូមស្វាគមន៍មកកាន់ Onboarding Task</string>
+    <string name="onboarding_welcome">សូមស្វាគមន៍មកកាន់កម្មវិធីភារកិច្ចណែនាំ</string>
     <string name="onboarding_get_started">ចាប់ផ្តើម</string>
     <string name="home_title">ទំព័រដើម</string>
     <string name="task_list_title">បញ្ជីការងារ</string>
@@ -132,8 +132,8 @@
 
     <!-- Onboarding Screen -->
     <string name="onboarding_title">គ្រប់គ្រងភារកិច្ចរបស់អ្នកជាមួយ\nកម្មវិធីទិវា</string>
-    <string name="onboarding_subtitle">Organize your daily life and work with Dayzer. Simple, easy, and effective.</string>
-    <string name="onboarding_button">Get Started</string>
-    <string name="onboarding_have_account">Have an account?</string>
-    <string name="onboarding_login">Log In</string>
+    <string name="onboarding_subtitle">រៀបចំជីវិតប្រចាំថ្ងៃ និងការងាររបស់អ្នកជាមួយកម្មវិធីទិវា។ សាមញ្ញ ងាយស្រួល និងមានប្រសិទ្ធភាព។</string>
+    <string name="onboarding_button">ចាប់ផ្តើម</string>
+    <string name="onboarding_have_account">មានគណនីហើយឬនៅ?</string>
+    <string name="onboarding_login">ចូលប្រព័ន្ធ</string>
 </resources>
